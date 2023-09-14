@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8"/>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<style>
+    .bg-light {
+        background-color: #212529 !important;
+    }
+
+    
+     
+</style>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand"><img src="~/image/logo.png" /></a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav" style="margin-left: 120px">
+                        <a href="/home/index" class="nav-item nav-link active" style="color:white; font-size: 25px">Home</a>
+                        @*<a href="#" class="nav-item nav-link active" style="color:white; font-size: 25px">All Product</a>*@
+                        <a href="/Home/Male" class="nav-item nav-link active" style="color:white; font-size: 25px">Male</a>
+                        <a href="/home/female" class="nav-item nav-link" style="color: white; font-size: 25px">Female</a>
+                        <a href="/home/kid" class="nav-item nav-link" style="color: white; font-size: 25px">Kid</a>
+                    </div>
+                    <form class="d-flex">
+                        <div class="input-group" style="margin-left:1000px">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <button type="button" class="btn btn-secondary"><i class="bi-search"><img src="~/image/search_icon.png" /></i></button>
+                        </div>
+                    </form>
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link last"><img src="~/image/shop_icon.png"></a>
+                        <a href="#" class="nav-item nav-link" style="color: white; font-size: 25px">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        @RenderBody()
+        <div class="copyright font-monospace" style="margin-top: 20px">
+            <p>Vo Thanh Dat - 2001206985</p>
+            <p>--------------------------</p>
+        </div>
+
+    </div>
+</body>
+</html>
